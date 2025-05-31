@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    container_name: function-blob-trigger-java-17
+    environment:
+      AzureWebJobsScriptRoot: "/home/site/wwwroot"
+      AzureFunctionsJobHost__Logging__Console__IsEnabled: "true"
+      AzureFunctionsJobHost__Logging__LogLevel__Default: "Information"
+      AzureWebJobsStorage: "reemplazar_con_cadena_de_conexión_de_almacenamiento_azure"
